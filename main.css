@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Corpo{
+    margin: 8px 30px;
+
+}
+header{
+    color: #fff;
+    background-color: #2a66d2;
+    padding: 1em;
+    font-weight: bold;
+}
+ul li{
+    list-style: none;
+}
+
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header nav li{
+    display:inline;
+    margin: 16px;
+    font-size: 18px;
+    }
+
+.sobre-a-loja {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.produtos-h1{
+    color: #2a66d2;
+}
+.Produtos{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    padding: 4px;
+    column-gap: 1%;
+    row-gap: 5%;
+    margin: auto;
+    width: 100%;
+    
+}
+
+.linha {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.linha span {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #2a66d2;
+    margin: 0 10px;
+}
+
+.produtos-h1 {
+    margin: 10px 0;
+}
+section img{
+    max-width: 100%;
+    height: auto;
+}
+.produtos-h1,
+.paragrafo-sobre{
+}
+.imagem-sobre{
+    max-width: 50%;
+}
+.sobree{
+    padding: 4px;
+}
+
+h5{
+    font-weight: normal;
+    padding-bottom: 3px;
+}
+
+button{
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background-color: #2a66d2;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #3a5a96;
+}
+
+.Produtos{
+    padding-bottom: 12px;
+}
+
+@media screen and (max-width: 640px) {
+    .Produtos {        
+        display: block;
+        grid-template-columns: 100%;
+        gap: 0;
+    }
+    .sobre-a-loja{
+        display: block;
+        width: 100%;
+    }
+    .imagem-sobre{
+        width: 100%;
+        height: auto;
+    }   
+
+}
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .Produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .Produtos {
+        display: grid;
+        grid-template-columns: repeat(4, 25%); /* Exemplo: 4 colunas */
+        gap: 1%;
+        padding: 4px;
+        margin: auto;
+        width: 100%;
+    }
+}
+
